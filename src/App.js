@@ -45,7 +45,7 @@ function App() {
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency[0].Sell}</h3>
+ <h3 class="priceTable-price">{currency.Currency[0].Sell}</h3>
  
  
                <ul class="priceTable-ul">
@@ -56,7 +56,63 @@ function App() {
                <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">12</h3>
+ <h3 class="priceTable-price">{currency.Currency[0].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">یورو</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Currency[1].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Currency[1].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">پوند انگلیس</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Currency[2].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Currency[2].Buy} </h3>
                <ul class="priceTable-ul">
                    
                </ul>
@@ -65,6 +121,8 @@ function App() {
    </section>
 </div>
 </div>
+
+
 
 ) : ('')}
 
