@@ -33,7 +33,7 @@ function App() {
  return(
 <div className="app">
 <main>
-
+ {(typeof currency.Currency != "undefined") ? (
 <div>
 <div className="namedollar"></div>
 <div className="price-box">
@@ -66,6 +66,7 @@ function App() {
 </div>
 </div>
 
+) : ('')}
 
 </main>
 
