@@ -10,8 +10,9 @@ body {
 
 .app {
   background-image: url('./assets/money.jpg');
-  background-size: cover;
-  background-position: bottom;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
   transition: 0.4 ease;
 }
 

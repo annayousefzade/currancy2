@@ -33,7 +33,7 @@ function App() {
  return(
 <div className="app">
 <main>
- {(typeof currency.Currency != "undefined") ? (
+ {(typeof currency.Currency != "undefined")  &&  (typeof currency.Gold != "undefined") ? (
 <div>
 <div className="namedollar"></div>
 <div className="price-box">
@@ -113,6 +113,118 @@ function App() {
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">فروش</h3>
  <h3 class="priceTable-price">{currency.Currency[2].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">سکه آزادی قدیم</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Gold[0].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Gold[0].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">سکه امامی</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Gold[1].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Gold[1].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">نیم سکه</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Gold[2].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Gold[2].Buy} </h3>
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+   </section>
+</div>
+<div className="namedollar"></div>
+<div className="price-box">
+
+<div className="dollarprice">ربع سکه</div>
+<section class="container-main-all">
+      
+      <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">خرید</h3>
+ <h3 class="priceTable-price">{currency.Gold[3].Sell}</h3>
+ 
+ 
+               <ul class="priceTable-ul">
+                   
+               </ul>
+           </div>
+       </section>
+               <section class="priceTable-container-main">
+           <div class="priceTable-column-1">
+               <h3 class="priceTable-header">فروش</h3>
+ <h3 class="priceTable-price">{currency.Gold[3].Buy} </h3>
                <ul class="priceTable-ul">
                    
                </ul>
