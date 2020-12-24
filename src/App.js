@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-//const api = "https://currency.jafari.li/json";
+//const api = "https://gist.githubusercontent.com/ahmadpanah/e6225b11235a04397b813d0de6e6f5ad/raw/ab559a1146b5e6f2d57bd546c20c090842d5fcc6/sana.json";
 
 
 //https://api.openweathermap.org/data/2.5/weather?q=Isfahan&appid=5a873b6b606d9e2aa79aff040a0e7d63
@@ -10,7 +10,7 @@ import React, { useState } from 'react'
 function App() {
   const [query, setQuery] = useState('');
   const [currency, setCurrency] = useState({});
-  fetch("https://currency.jafari.li/json")
+  fetch("https://gist.githubusercontent.com/ahmadpanah/e6225b11235a04397b813d0de6e6f5ad/raw/ab559a1146b5e6f2d57bd546c20c090842d5fcc6/sana.json")
   .then(res => res.json())
   .then(result => {
     setCurrency(result);
@@ -33,11 +33,11 @@ function App() {
  return(
 <div className="app">
 <main>
- {(typeof currency.Currency != "undefined")  &&  (typeof currency.Gold != "undefined") ? (
+{(typeof currency.sana != "undefined")   ? ( 
 <div>
 <div className="namedollar"></div>
 <div className="price-box">
-<div className="date">{currency.LastModified} 
+<div className="date">{currency.sana.data[0].updated_at} 
 </div>
 <div className="dollarprice">دلار آمریکا</div>
 <section class="container-main-all">
@@ -45,7 +45,7 @@ function App() {
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Currency[0].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[0].p}</h3>
  
  
                <ul class="priceTable-ul">
@@ -53,15 +53,7 @@ function App() {
                </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Currency[0].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+            
    </section>
 </div>
 <div className="namedollar"></div>
@@ -73,7 +65,7 @@ function App() {
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Currency[1].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[1].p}</h3>
  
  
                <ul class="priceTable-ul">
@@ -81,27 +73,19 @@ function App() {
                </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Currency[1].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+             
    </section>
 </div>
 <div className="namedollar"></div>
 <div className="price-box">
 
-<div className="dollarprice">پوند انگلیس</div>
+<div className="dollarprice">درهم</div>
 <section class="container-main-all">
       
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Currency[2].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[2].p}</h3>
  
  
                <ul class="priceTable-ul">
@@ -109,83 +93,51 @@ function App() {
                </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Currency[2].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+              
    </section>
 </div>
 <div className="namedollar"></div>
 <div className="price-box">
 
-<div className="dollarprice">سکه آزادی قدیم</div>
+<div className="dollarprice">روپیه هند</div>
 <section class="container-main-all">
       
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Gold[0].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[3].p}</h3>
  
- 
-               <ul class="priceTable-ul">
-                   
-               </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Gold[0].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+              
    </section>
 </div>
 <div className="namedollar"></div>
 <div className="price-box">
 
-<div className="dollarprice">سکه امامی</div>
+<div className="dollarprice">لیر ترکیه</div>
 <section class="container-main-all">
       
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Gold[1].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[4].p}</h3>
  
- 
-               <ul class="priceTable-ul">
-                   
-               </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Gold[1].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+               
    </section>
 </div>
 <div className="namedollar"></div>
 <div className="price-box">
 
-<div className="dollarprice">نیم سکه</div>
+<div className="dollarprice">روبل روسیه</div>
 <section class="container-main-all">
       
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Gold[2].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[5].p}</h3>
  
  
                <ul class="priceTable-ul">
@@ -193,27 +145,19 @@ function App() {
                </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Gold[2].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+              
    </section>
 </div>
 <div className="namedollar"></div>
 <div className="price-box">
 
-<div className="dollarprice">ربع سکه</div>
+<div className="dollarprice">یوان چین</div>
 <section class="container-main-all">
       
       <section class="priceTable-container-main">
            <div class="priceTable-column-1">
                <h3 class="priceTable-header">خرید</h3>
- <h3 class="priceTable-price">{currency.Gold[3].Sell}</h3>
+ <h3 class="priceTable-price">{currency.sana.data[6].p}</h3>
  
  
                <ul class="priceTable-ul">
@@ -221,15 +165,7 @@ function App() {
                </ul>
            </div>
        </section>
-               <section class="priceTable-container-main">
-           <div class="priceTable-column-1">
-               <h3 class="priceTable-header">فروش</h3>
- <h3 class="priceTable-price">{currency.Gold[3].Buy} </h3>
-               <ul class="priceTable-ul">
-                   
-               </ul>
-           </div>
-       </section>
+               
    </section>
 </div>
 </div>
